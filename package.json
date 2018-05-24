@@ -1,0 +1,19 @@
+{
+  "name": "example-app",
+  "version": "1.0.0",
+  "description": "Small excercie before the interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorDobryn/node-example-app.git"
+  },
+  "author": "Igor Dobryn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgorDobryn/node-example-app/issues"
+  },
+  "homepage": "https://github.com/IgorDobryn/node-example-app#readme"
+}
