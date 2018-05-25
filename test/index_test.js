@@ -77,4 +77,10 @@ describe('exportApiDataToCsv', () => {
       done();
     });
   });
+
+  it('saves data from multiple requests');
+  it('does nothing on unsuccess responses');
+  it('handles invalid credentials');
+  it('handles invalid page number param');
+  it('handles response with incorrect JSON syntax')
 });
