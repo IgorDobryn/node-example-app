@@ -42,7 +42,5 @@ const getApiStream = ({ url, user, password }) => {
 };
 
 module.exports = {
-  isSuccessResponse,
-  isLastPage,
   getApiStream,
 }
