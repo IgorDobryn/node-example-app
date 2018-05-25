@@ -82,5 +82,6 @@ describe('exportApiDataToCsv', () => {
   it('does nothing on unsuccess responses');
   it('handles invalid credentials');
   it('handles invalid page number param');
-  it('handles response with incorrect JSON syntax')
+  it('handles response with incorrect JSON syntax');
+  it('warns if given file name already exists');
 });
