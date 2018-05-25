@@ -7,11 +7,14 @@ const isSuccessResponse = response => response.statusCode === 200
 const isLastPage = body => JSON.parse(body).length < recordsPerPage;
 const getApiStream = ({ url, user, password }) => {
   let pageNumber = 1;
+  let endReached = false;
 
   return new Readable({
     objectMode: true,
     read() {
-      request(url, {
+      if (endReached) return;
+
+      request.get(url, {
         qs: {
           page_number: pageNumber
         },
@@ -26,9 +29,11 @@ const getApiStream = ({ url, user, password }) => {
           this.push(response.body);
 
           if (isLastPage(response.body)) {
+            endReached = true;
             this.push(null);
           }
         } else {
+          endReached = true;
           this.push(null);
         }
       });
